@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="top-section.css">
+    <link rel="stylesheet" href="input-section.css">
+    <link rel="stylesheet" href="button-section.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: montserrat;
+        }
+        body{
+            background-color: rgb(58,70,101);
+        }
+        .container{
+            margin: 40px auto;
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <section class="top-section">
+            <strong>calc</strong>
+    
+            <div class="top-right">
+                <p class="theme">THEME</p>
+    
+                <div class="toggle-container">
+                    <div class="list-mode">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                    </div>
+    
+                    <div class="button-container">
+                        <button class="toggle-btn"></button>
+                    </div>
+    
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="input-section">
+            <input type="text" class="inputBox">
+        </section>
+
+        <div class="button-input-container">
+            <div class="button-input-container-top-section">
+                <button onclick="inputValue(`7`)">7</button>
+                <button onclick="inputValue(`8`)">8</button>
+                <button onclick="inputValue(`9`)">9</button>
+                <button onclick="inputValue(`DEL`)" class="deleteBtn">DEL</button>
+                <button onclick="inputValue(`4`)">4</button>
+                <button onclick="inputValue(`5`)">5</button>
+                <button onclick="inputValue(`6`)">6</button>
+                <button onclick="inputValue(`+`)">+</button>
+                <button onclick="inputValue(`1`)">1</button>
+                <button onclick="inputValue(`2`)">2</button>
+                <button onclick="inputValue(`3`)">3</button>
+                <button onclick="inputValue(`-`)">-</button>
+                <button onclick="inputValue(`.`)">.</button>
+                <button onclick="inputValue(`0`)">0</button>
+                <button onclick="inputValue(`/`)">/</button>
+                <button onclick="inputValue(`*`)">x</button>
+            </div>
+
+            <div class="button-input-container-bottom-section">
+                <button onclick="inputValue(`RESET`)" class="resetBtn">RESET</button>
+                <button onclick="inputValue(`=`)" class="equalBtn">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script >
+        let inputBox_elem = document.querySelector('.inputBox');
+
+        function inputValue(input){
+
+
+            if (input === "="){
+                inputBox_elem.value = evaluateExp(inputBox_elem.value);
+            }else if(input === "RESET"){
+                inputBox_elem.value = "";
+            }else if(input === "DEL"){
+                inputBox_elem.value = inputBox_elem.value.slice(0, -1)
+            }else{
+                inputBox_elem.value += input;
+            }
+        }
+
+        function evaluateExp(expression){
+            try{
+                return new Function(`return ${expression}`)();
+            }catch{
+            }
+        }
+    </script>
+
+
+</body>
+</html>

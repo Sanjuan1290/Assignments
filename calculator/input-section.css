@@ -1,0 +1,20 @@
+.input-section{
+    background-color: rgb(24,30,50);
+    border-radius: 5px;
+    margin: 10px 0px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputBox{
+    background-color: transparent;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    text-align: right;
+    margin-left: 10px;
+    width: 85%;
+    outline: none;
+    border: none;
+}
