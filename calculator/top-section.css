@@ -41,4 +41,8 @@
     border-radius: 100%;
     border: none;
     margin-left: 2px;
+    transition: margin .15s;
+}
+.toggle-btn:hover{
+    cursor: pointer;
 }
