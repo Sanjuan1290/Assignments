@@ -1,0 +1,89 @@
+.signup-container, .login-container{
+    background-color: rgba(102, 102, 102, 0.3);
+    width: 400px;
+    border-radius: 10px;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 30px;
+    position: absolute;
+    transition: opacity .25s  ease-in-out;
+}
+.signUp, .login{
+    font-size: 25px;
+}
+.signup-body, .login-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 20px;
+    width: calc(100% - 10%);
+    position: relative;
+}
+.signup-body input, .login-body input{
+    background-color: rgba(102, 102, 102, 0.4);
+    padding: 15px 0px 15px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    width: calc(100% - 10px);
+}
+.icon{
+    width: 20px;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    left: 12px;
+}
+.emailIcon{
+    bottom: 85px;
+}
+.passwordIcon{
+    bottom: 15px;
+}
+
+input::placeholder{
+    color: white;
+}
+.signup-firstName, .signup-lastName{
+    grid-column: span 1;
+}
+.signup-body .signup-Email, .signup-body .signup-Password, .login-body input{
+    grid-column: span 2;
+    padding-left: 45px;
+    width: calc(100% - 45px);
+}
+
+.continueBtn, .loginBtn{
+    background-color: rgb(254,95,89);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 45px;
+    font-size: 18px;
+    box-shadow: 0px 3px 15px rgba(37, 37, 37, 0.5);
+    transition: transform .15s, box-shadow .15s;
+}
+.continueBtn:hover, .loginBtn:hover{
+    cursor: pointer;
+    transform: scale(110%);
+    box-shadow: 0px 10px 0px rgba(14, 14, 14, 0.5);
+}
+.continueBtn:active, .loginBtn:active{
+    transform: scale(110%);
+    box-shadow: 0px 3px 0px rgba(14, 14, 14, 0.5);
+    transform: translateY(5px);
+}
+
+.link-to-login button, .link-to-signup button{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: aquamarine;
+}
+
+.link-to-login button:hover, .link-to-signup button:hover{
+    cursor: pointer;
+}

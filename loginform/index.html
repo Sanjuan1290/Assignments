@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: montserrat;
+            color: white;
+        }
+        body{
+            background-color: rgb(45,45,45);
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="signup-container" style="opacity: 0; z-index: 0;">
+        <div class="signUp">Sign Up</div>
+
+        <div class="signup-body">
+
+            <input type="text" class="signup-firstName" placeholder="First Name">
+            <input type="text" class="signup-lastName" placeholder="Last Name">
+
+            <img class="icon emailIcon" src="emailIcon.png" alt="emailIcon">
+            <input type="text" class="signup-Email" placeholder="Email">
+            <img class="icon passwordIcon" src="passwordIcon.png" alt="passIcon">
+            <input type="password" class="signup-Password" placeholder="Password">
+        </div>
+
+        <div class="continueBtn-container">
+            <button onclick="register()" class="continueBtn">Register</button>
+        </div>
+
+        <div class="link-to-login">
+            <span>Already have an account?</span>
+            
+            <button onclick="linkToLogin()">Log in!</button>
+        </div>
+    </div>
+
+    <div class="login-container">
+        <div class="login">Log in</div>
+
+        <div class="login-body">
+            <img class="icon emailIcon" src="emailIcon.png" alt="emailIcon">
+            <input type="text" class="login-Email" placeholder="Email">
+            <img class="icon passwordIcon" src="passwordIcon.png" alt="passIcon">
+            <input type="password" class="login-Password" placeholder="Password">
+        </div>
+
+        <div class="loginBtn-container">
+            <button onclick="login()" class="loginBtn">Log in</button>
+        </div>
+
+        <div class="link-to-signup">
+            <button onclick="linkToSignUp()">Forgot your password?</button>
+        </div>
+    </div>
+
+    <script src="script.js">
+        
+
+    </script>
+</body>
+</html>
