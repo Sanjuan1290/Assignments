@@ -16,8 +16,8 @@ section{
 
 .background-cirles-container{
     position: absolute;
-    height: 65vh;
-    width: 75vh;
+    height: 70vh;
+    width: 80vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -25,10 +25,11 @@ section{
 
 .top-left-circle, .bottom-right-circle{
     position: absolute;
-    height: 400px;
-    width: 400px;
+    height: 35vh;
+    width: 35vh;
     background: linear-gradient(90deg, rgba(235,75,237,1) 0%, rgba(238,86,219,1) 20%, rgba(238,123,216,1) 48%, rgba(224,191,217,1) 92%);
     border-radius: 100%;
+
 }
 
 .bottom-right-circle{
